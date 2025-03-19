@@ -13,18 +13,14 @@ selectButton.addEventListener("click", ()=>{
 
 
 resetButton.addEventListener("click", ()=>{for (let j = 0; j <numberOfSquares; j++) {
-           
+       
 }
 })
 
 
 function getRandomColor()
 {
-    let r,g,b;
-
-    r=Math.floor(Math.random()*256);
-    g=Math.floor(Math.random()*256);
-    b=Math.floor(Math.random()*256);
+    return Math.floor(Math.random()*256);
 }
 
 
@@ -50,4 +46,8 @@ function createDiv(){
     let div=document.createElement("div");
     div.classList.add("square");
     horizontalDiv.appendChild(div);
+
+    div.addEventListener("mouseover", ()=>{
+        div.style.backgroundColor= `rgb(${getRandomColor()},${getRandomColor()}, ${getRandomColor()} )`;
+    })
 }
