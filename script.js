@@ -8,6 +8,11 @@ let horizontalDiv;
 
 selectButton.addEventListener("click", ()=>{
     numberOfSquares=prompt("Enter the number of squares vertically and horizontally:");
+    if (numberOfSquares>100 || numberOfSquares<1){
+        alert("Invalid number. Please select a number within range 1-100");
+        return 0;
+    }
+    
     createSquares();
 })
 
