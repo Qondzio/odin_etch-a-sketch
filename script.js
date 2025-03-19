@@ -13,7 +13,10 @@ selectButton.addEventListener("click", ()=>{
 
 
 resetButton.addEventListener("click", ()=>{for (let j = 0; j <numberOfSquares; j++) {
-       
+    document.querySelectorAll(".square").forEach(element => {
+        element.removeAttribute("style");
+    });;
+    
 }
 })
 
